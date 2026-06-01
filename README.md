@@ -1,3 +1,32 @@
+# Cerebras Model Quality Challenge — Task 2
+
+## Stratified Discrimination Pruner
+
+Developed against evalscope commit: `7b30b4847e915d307b6f57cb9542ef04dc6f3b4d`  
+(run `git rev-parse HEAD` before adding this line)
+
+### What this adds
+- `evalscope/pruners/` — LCB and AA-LCR stratified discrimination pruners
+- `tools/validate_pruner.py` — validation script comparing full vs pruned benchmark scores
+
+### Usage
+```bash
+pip install -e .
+
+python tools/validate_pruner.py \
+  --lcb-reviews path/to/Evals/Part\ 1/reviews \
+  --aalcr-reviews path/to/Evals/Part\ 1/reviews
+```
+
+### Results
+| Benchmark | Full | Pruned | Reduction | Go/No-Go Agreement |
+|---|---|---|---|---|
+| LiveCodeBench v5 | 315 | 50 | 84.1% | 100% |
+| AA-LCR | 100 | 24 | 76.0% | 100% |
+
+See `Handout_A_Technical.docx` for methodology and `Handout_B_Mixed_Audience.docx` for usage guidance.
+
+
 <p align="center">
     <br>
     <img src="docs/en/_static/images/evalscope_logo.png"/>
