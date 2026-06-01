@@ -2,8 +2,7 @@
 
 ## Stratified Discrimination Pruner
 
-Developed against evalscope commit: `7b30b4847e915d307b6f57cb9542ef04dc6f3b4d`  
-(run `git rev-parse HEAD` before adding this line)
+Developed against evalscope commit: `7b30b4847e915d307b6f57cb9542ef04dc6f3b4d`
 
 ### What this adds
 - `evalscope/pruners/` — LCB and AA-LCR stratified discrimination pruners
